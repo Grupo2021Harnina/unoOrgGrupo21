@@ -18,6 +18,7 @@ public class UI extends JFrame {
 	
 	private JPanel contentPane;
 	public JPanelOpciones jPanelOpciones;
+	public Botonera botonera;
 
 	
 	/**
@@ -33,6 +34,9 @@ public class UI extends JFrame {
 		
 		jPanelOpciones=new JPanelOpciones();
 		contentPane.add(jPanelOpciones, BorderLayout.SOUTH);
+		
+		
+		
 	}
 
 	public void tomaValores(Densidad densidad, Dificultad dificultad) {
@@ -52,4 +56,22 @@ public class UI extends JFrame {
 		return jPanelOpciones.getCmbDensidad();
 	}
 
+	public void crearBotonera() {
+		if (botonera!=null) {
+			contentPane.remove(botonera);
+		}
+		Dificultad dificultad = (Dificultad) getCmbDificultad().getSelectedItem();
+		botonera = new Botonera(dificultad.getLongitud());
+		contentPane.add(botonera, BorderLayout.CENTER);
+		botonera.setVisible(true);
+		//Se encarga de refrescar la botonera al cambiarle la dificultad
+		contentPane.revalidate();
+		
+	}
+
+//	public void crearBotonera(int tamano) {
+//		 botonera = new Botonera(tamano);
+//	     contentPane.add(botonera, BorderLayout.CENTER);
+//	     botonera.setVisible(false);
+//	}
 }

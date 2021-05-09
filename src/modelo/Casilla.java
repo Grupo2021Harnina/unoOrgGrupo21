@@ -7,7 +7,6 @@ public class Casilla {
 	private boolean velada=true;
 	private boolean marcada=false;
 	private int minasAlrededor=0;
-	
 	public Casilla() {
 		
 	}
@@ -40,6 +39,13 @@ public class Casilla {
 		return String.valueOf(mina);
 	}
 	
+		public void incrementaUnaMinaAlrededor() {
+			this.minasAlrededor+=1;
+		}
+	
+		public void mostrarCasilla() {
+			velada =false;
+		}
 	
 	
 }

@@ -1,5 +1,6 @@
 package vista;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -20,6 +21,7 @@ public class Botonera extends JPanel {
 		for (int i = 0; i < lado; i++) {
 			for (int j = 0; j < lado; j++) {
 				this.botones[i][j] = new JButton();
+				this.botones[i][j].setBackground(Color.DARK_GRAY);
 				this.add(this.botones[i][j]);
 			}
 		}
@@ -47,4 +49,9 @@ public class Botonera extends JPanel {
 		}
 		return null;
 	}
+
+	public JButton getBoton(int i, int j) {
+		return botones[i][j];
+	}
+
 }

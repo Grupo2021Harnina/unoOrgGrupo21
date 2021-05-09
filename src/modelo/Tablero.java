@@ -32,5 +32,13 @@ public class Tablero {
 	public int getAncho() {
 		return casillas[0].length;
 	}
+	//Ahora vamos a 
+	
+	public boolean enLimites(Coordenada coordenada) {
+		return coordenada.getPosX() >= 0 && coordenada.getPosY() >= 0
+				&& coordenada.getPosX() < getAlto() && 
+				coordenada.getPosY() < getAlto(); 
+	}
+	
 
 }

@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.ArrayList;
+
 public enum Densidad {
 	baja(10),media(15),alta(20);
 	
@@ -8,5 +10,10 @@ public enum Densidad {
 	private Densidad(int porcentaje) {
 		this.porcentaje = porcentaje;
 	}
+
+	public int getPorcentaje() {
+		return porcentaje;
+	}
+ 
 	
 }
